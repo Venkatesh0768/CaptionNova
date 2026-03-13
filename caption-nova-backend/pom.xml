@@ -11,8 +11,8 @@
     <groupId>org.backend</groupId>
     <artifactId>caption-nova-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>caption-nova-backend</name>
-    <description>caption-nova-backend</description>
+    <name>Caption Nova Backend</name>
+    <description>AI-powered platform for video captioning - Backend</description>
     <url/>
     <licenses>
         <license/>

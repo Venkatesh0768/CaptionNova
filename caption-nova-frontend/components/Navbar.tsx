@@ -49,8 +49,8 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link href="/dashboard" className="navbar-logo">
-        <div className="navbar-logo-icon">A</div>
-        <span>AppName</span>
+        <div className="navbar-logo-icon">CN</div>
+        <span>Caption Nova</span>
       </Link>
 
       <div className="navbar-nav">

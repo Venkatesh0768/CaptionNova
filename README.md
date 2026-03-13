@@ -1,6 +1,6 @@
-# 🚀 CaptionNova - Full-Stack Modern Media Application
+# 🎬 Caption Nova - AI-Powered Video Captioning Platform
 
-CaptionNova is a high-performance, containerized full-stack application designed with modern DevOps principles. It features a robust Spring Boot backend and a lightning-fast Next.js frontend, all orchestrated via Docker for seamless development and deployment.
+Caption Nova is a professional AI-driven platform designed for video editors and creators. It simplifies the captioning process using advanced AI and customizable templates, making it easier than ever to add high-quality captions to your videos. Built with a robust Spring Boot backend and a modern Next.js frontend, it's orchestrated via Docker for production-ready deployment.
 
 ---
 

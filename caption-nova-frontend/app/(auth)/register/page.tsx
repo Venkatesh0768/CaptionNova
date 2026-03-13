@@ -70,13 +70,12 @@ export default function RegisterPage() {
   return (
     <div className="auth-layout">
       <div className="auth-brand-panel">
-        <div className="auth-brand-logo">A</div>
+        <div className="auth-brand-logo">CN</div>
         <h1 className="auth-brand-title">
-          Join thousands of<br />teams worldwide.
+          Join thousands of<br />creators worldwide.
         </h1>
         <p className="auth-brand-subtitle">
-          Get started with a free account. No credit card required.
-          Enterprise features available on day one.
+          Start your journey with Caption Nova. Create stunning videos with AI-powered captions in minutes.
         </p>
         <div className="auth-brand-dots">
           {Array.from({ length: 42 }).map((_, i) => <span key={i} />)}
@@ -86,9 +85,9 @@ export default function RegisterPage() {
       <div className="auth-form-panel">
         <div className="auth-form-container">
           <div className="auth-form-header">
-            <div className="auth-form-logo-sm">A</div>
-            <h2 className="auth-form-title">Create your account</h2>
-            <p className="auth-form-subtitle">Free forever. No credit card needed.</p>
+            <div className="auth-form-logo-sm">CN</div>
+            <h2 className="auth-form-title">Create your creator account</h2>
+            <p className="auth-form-subtitle">Join the future of video editing.</p>
           </div>
 
           {error && (

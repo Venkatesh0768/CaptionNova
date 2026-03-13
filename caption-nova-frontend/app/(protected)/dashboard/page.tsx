@@ -43,7 +43,19 @@ export default function DashboardPage() {
   return (
     <>
       <div className="page-title">Welcome back, {user?.firstName}! 👋</div>
-      <p className="page-subtitle">Here&apos;s an overview of your account.</p>
+      <p className="page-subtitle">Ready to create some amazing captions today?</p>
+
+      {/* AI Quick Actions */}
+      <div className="stats-grid" style={{ marginBottom: "2rem" }}>
+        <div className="stat-card" style={{ cursor: "pointer", background: "var(--gradient-brand)", border: "none" }}>
+          <div className="stat-value" style={{ fontSize: "1.5rem" }}>✨ New Project</div>
+          <div className="stat-label" style={{ color: "rgba(255,255,255,0.8)" }}>Upload video & add AI captions</div>
+        </div>
+        <div className="stat-card" style={{ cursor: "pointer" }}>
+          <div className="stat-value" style={{ fontSize: "1.5rem" }}>🎨 Templates</div>
+          <div className="stat-label">Browse caption styles</div>
+        </div>
+      </div>
 
       {/* Profile Card */}
       <div className="profile-card">

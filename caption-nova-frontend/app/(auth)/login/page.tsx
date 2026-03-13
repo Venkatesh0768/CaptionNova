@@ -76,12 +76,12 @@ export default function LoginPage() {
     <div className="auth-layout">
       {/* Brand panel */}
       <div className="auth-brand-panel">
-        <div className="auth-brand-logo">A</div>
+        <div className="auth-brand-logo">CN</div>
         <h1 className="auth-brand-title">
-          Enterprise-grade<br />authentication.
+          Caption your videos<br />with AI power.
         </h1>
         <p className="auth-brand-subtitle">
-          Secure, role-based access management built for the scale of modern product companies.
+          The ultimate platform for creators to add professional AI captions and templates to videos with ease.
         </p>
         <div className="auth-brand-dots">
           {Array.from({ length: 42 }).map((_, i) => (
@@ -94,9 +94,9 @@ export default function LoginPage() {
       <div className="auth-form-panel">
         <div className="auth-form-container">
           <div className="auth-form-header">
-            <div className="auth-form-logo-sm">A</div>
-            <h2 className="auth-form-title">Welcome back</h2>
-            <p className="auth-form-subtitle">Sign in to your account</p>
+            <div className="auth-form-logo-sm">CN</div>
+            <h2 className="auth-form-title">Welcome to Caption Nova</h2>
+            <p className="auth-form-subtitle">Sign in to your creator account</p>
           </div>
 
           {/* OAuth2 Buttons */}

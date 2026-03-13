@@ -56,7 +56,7 @@ public class EmailService {
         try {
             MimeMessage mime = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(mime, true, "UTF-8");
-            helper.setFrom(fromEmail, "AppName Security");
+            helper.setFrom(fromEmail, "Caption Nova Security");
             helper.setTo(to);
             helper.setSubject(subject);
             helper.setText(html, true); // true = isHtml
@@ -135,7 +135,7 @@ public class EmailService {
                 <!-- Footer -->
                 <tr>
                   <td style="background:#0f172a;padding:20px 40px;text-align:center;border-top:1px solid #1e293b;">
-                    <p style="margin:0;color:#334155;font-size:11px;">© 2025 AppName · Sent to you because you made a request on our platform.</p>
+                    <p style="margin:0;color:#334155;font-size:11px;">© 2026 Caption Nova · Sent to you because you made a request on our platform.</p>
                     <p style="margin:6px 0 0;color:#334155;font-size:11px;">This is an automated email — please do not reply.</p>
                   </td>
                 </tr>

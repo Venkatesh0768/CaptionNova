@@ -10,8 +10,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "AppName — Secure Platform",
-  description: "Enterprise-grade role-based authentication and access control.",
+  title: "Caption Nova — AI-Powered Video Captioning",
+  description: "The ultimate platform for creators to add AI captions and templates to videos with ease.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
