@@ -1,0 +1,64 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: captionnova-mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: captionnovadb
+    env_file:
+      - .env
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - captionnova_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./caption-nova-backend
+      dockerfile: Dockerfile
+    image: venkatesh0768/backend:latest
+    container_name: captionnova-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000" # Backend runs on 5000 inside container (set by application-prod.yml)
+    env_file:
+      - .env
+    environment:
+      - DB_URL=jdbc:mysql://mysql:3306/captionnovadb?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      - SPRING_PROFILES_ACTIVE=prod
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - captionnova_network
+
+  frontend:
+    build:
+      context: ./caption-nova-frontend
+      dockerfile: Dockerfile
+    image: venkatesh0768/frontend:latest
+    container_name: captionnova-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - backend
+    networks:
+      - captionnova_network
+
+networks:
+  captionnova_network:
+    driver: bridge
+
+volumes:
+  mysql_data:

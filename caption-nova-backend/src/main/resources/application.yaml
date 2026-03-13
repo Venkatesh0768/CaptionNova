@@ -1,3 +1,5 @@
 spring:
   application:
     name: caption-nova-backend
+  profiles:
+    active: dev
